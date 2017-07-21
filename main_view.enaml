@@ -1,0 +1,17 @@
+from enaml.widgets.api import *
+from enaml.layout.layout_helpers import *
+
+from main_model import MainModel
+
+
+enamldef MainView(MainWindow):
+
+    attr model = MainModel()
+
+    initial_size = (800, 600)
+    title = 'Enaml Quickstart'
+
+    GroupBox:
+
+        Label:
+            text = model.message
